@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class AnimeKup : MonoBehaviour
+public class AnimateCube : MonoBehaviour
 {
     public List<GameObject> gameObjects = new List<GameObject>();
     private void OnTriggerEnter(Collider other)
     {
-       
         if (other.gameObject.tag == "KüpTop")
         {
             other.gameObject.SetActive(false);
@@ -15,8 +13,6 @@ public class AnimeKup : MonoBehaviour
             {
                 gameObjects[i].SetActive(true);
             }
-
-
         }
     }
 }
